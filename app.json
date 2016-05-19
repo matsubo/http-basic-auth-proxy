@@ -1,5 +1,5 @@
 {
-  "name": "HTTP/HTTPS basic auth bypass proxy",
+  "name": "HTTP/HTTPS basic auth bypass",
   "description": "This serivce provides authentication using GET parameter instead of HTTP/HTTPS basic auth. You can use this service free.",
   "keywords": [
     "PHP",
