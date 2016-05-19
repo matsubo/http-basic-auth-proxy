@@ -1,0 +1,21 @@
+{
+  "name": "HTTP/HTTPS basic auth bypass proxy",
+  "description": "This serivce provides authentication using GET parameter instead of HTTP/HTTPS basic auth. You can use this service free.",
+  "keywords": [
+    "PHP",
+    "Proxy",
+    "basic auth",
+    "https",
+    "http"
+  ],
+  "website": "https://http-basic-auth-proxy.herokuapp.com/",
+  "repository": "https://github.com/matsubo/http-basic-auth-proxy/",
+  "success_url": "/",
+  "addons": [
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-php"
+    }
+  ]
+}
