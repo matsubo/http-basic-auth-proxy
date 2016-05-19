@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>HTTP/HTTPS basic auth proxy</title>
+    <meta name="author" content="Yuki Matsukura">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">HTTP/HTTPS basic auth proxy</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>HTTP/HTTPS basic auth proxy</h1>
+        <p>This serivce provides authentication using GET parameter instead of HTTP/HTTPS basic auth. You can use this service free. However, your basic user ID and password is logged in access log.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Usage</h2>
+          <h3>Endpoint URL</h3>
+          <p>
+            <code>https://http-basic-auth-proxy.herokuapp.com/proxy.php</code>
+          </p>
+
+          <h3>Parameters</h3>
+          <table>
+            <thead>
+              <th>Key</th>
+              <th>Description</th>
+              <th>Example</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>http_basic_user (required)</td>
+                <td>HTTP Basic auth user name</td>
+                <td><code>username</code></td>
+              </tr>
+              <tr>
+                <td>http_basic_password (required)</td>
+                <td>HTTP Basic auth password</td>
+                <td><code>passw0rd</code></td>
+              </tr>
+              <tr>
+                <td>http_host_path (required)</td>
+                <td>destination of host name and path</td>
+                <td><code>example.com/actual/endpoint</code></td>
+              </tr>
+              <tr>
+                <td>http_scheme (optional)</td>
+                <td>Protocol of destination endpoint. default is <code>https</code>.</td>
+                <td><code>https</code></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            All GET parameters are passed to destination URL.
+          </p>
+
+          <h3>Example</h3>
+          <code>
+            https://http-basic-auth-proxy.herokuapp.com/proxy.php?http_basic_user=username&amp;http_basic_password=passw0rd&amp;http_host_path=example.com/&amp;additional=parameters&amp;
+            </code>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; 2016 <a href="http://matsu.teraren.com/blog/">Yuki Matsukura</a>.</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+  </body>
+</html>
+
