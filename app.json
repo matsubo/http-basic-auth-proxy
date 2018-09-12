@@ -1,4 +1,5 @@
 {
+  {
   "name": "HTTP(s) basic auth bypass",
   "description": "This serivce provides authentication using GET parameter instead of HTTP/HTTPS basic auth. You can use this service free.",
   "keywords": [
@@ -17,5 +18,6 @@
     {
       "url": "https://github.com/heroku/heroku-buildpack-php"
     }
-  ]
+  ],
+  "stack": "heroku-16"
 }
