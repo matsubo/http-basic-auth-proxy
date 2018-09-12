@@ -19,5 +19,5 @@
       "url": "https://github.com/heroku/heroku-buildpack-php"
     }
   ],
-  "stack": "heroku-16"
+  "stack": "heroku-18"
 }
