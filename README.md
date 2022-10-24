@@ -10,3 +10,4 @@ HTTP/HTTPS basic auth bypass proxy
 # Usage
 
 See: https://http-basic-auth-proxy.herokuapp.com/
+
